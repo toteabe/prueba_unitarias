@@ -34,6 +34,9 @@ public class Connect4TDDSpec {
     @Test
     public void whenTheGameStartsTheBoardIsEmpty() {
 
+        int numDisc = tested.getNumberOfDiscs();
+
+        assertThat(numDisc).isEqualTo(0).describedAs("The number of disc is 0, which means the board is empty");
     }
 
     /*
