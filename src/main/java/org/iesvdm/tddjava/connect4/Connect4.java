@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 /**
  * Test-last implementation
  */
-public class Connect4 {
+public class sConnect4 {
 
     public enum Color {
         RED('R'), GREEN('G'), EMPTY(' ');
