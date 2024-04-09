@@ -1,6 +1,8 @@
 package org.iesvdm.tddjava.connect4;
 
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +35,10 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenTheGameStartsTheBoardIsEmpty() {
+        MatcherAssert.assertThat(this.tested.getNumberOfDiscs(), Matchers.is(0));
+        output=new ByteArrayOutputStream();
 
+        assertThat(tested.getNumberOfDiscs()).isZero();
     }
 
     /*
@@ -47,7 +52,6 @@ public class Connect4TDDSpec {
      */
     @Test
     public void whenDiscOutsideBoardThenRuntimeException() {
-
 
     }
 

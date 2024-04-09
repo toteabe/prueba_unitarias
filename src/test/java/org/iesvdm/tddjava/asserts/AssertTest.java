@@ -1,14 +1,10 @@
 package org.iesvdm.tddjava.asserts;
-
-
-
 import org.junit.jupiter.api.Test;
 import org.testng.IObjectFactory2;
-
 import java.util.*;
 
+//SE TRAE TODOS LOS MÉTODOS Y ATRIBUTOS ESTÁTICOS DE LA CLASE assertions
 import static org.junit.jupiter.api.Assertions.*;
-
 
 /**
 <p>
@@ -42,12 +38,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
  */
 
-
+//ESTÁ LA CONVENCIÓN DE LLAMAR A LAS CLASES DE TEST LO QUE SEA DE TEST *Test
 public class AssertTest {
 
     @Test
     void whenBooleanIsTrue() {
-        assertTrue(1 == 1);
+        assertEquals(true, true);
     }
 
     @Test
@@ -138,7 +134,6 @@ public class AssertTest {
         Object second = new Object();
 
         List list = Arrays.asList(first, second);
-
         assertIterableEquals(list, Arrays.asList(first, second));
     }
 
@@ -156,7 +151,6 @@ public class AssertTest {
         assertTrue(list.size() == list2.size());
         assertTrue(list.containsAll(list2));
         assertTrue(list2.containsAll(list));
-
     }
 
     @Test
