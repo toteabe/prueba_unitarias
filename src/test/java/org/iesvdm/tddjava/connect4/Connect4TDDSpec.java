@@ -42,6 +42,9 @@ public class Connect4TDDSpec {
      * Future discs introduced in the same column will stack over previous ones
      */
 
+    /**
+     * Clase de test del juego connect4
+     */
     @Test
     public void whenDiscOutsideBoardThenRuntimeException() {
 
