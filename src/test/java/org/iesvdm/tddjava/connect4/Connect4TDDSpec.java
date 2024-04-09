@@ -12,7 +12,9 @@ import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
+/**
+ * Clase de test del juego connect4
+ */
 public class Connect4TDDSpec {
 
     private Connect4TDD tested;
@@ -52,6 +54,7 @@ public class Connect4TDDSpec {
     public void whenFirstDiscInsertedInColumnThenPositionIsZero() {
 
         assertThat(tested.putDiscInColumn(0)).isEqualTo(0);
+
 
     }
 
