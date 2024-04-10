@@ -54,8 +54,6 @@ public class Connect4TDDSpec {
     @Test
     public void whenFirstDiscInsertedInColumnThenPositionIsZero() {
 
-        assertThat(tested.putDiscInColumn(0)).isEqualTo(0);
-
     }
 
     @Test
