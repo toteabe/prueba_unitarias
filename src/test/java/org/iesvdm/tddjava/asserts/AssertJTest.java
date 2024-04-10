@@ -11,7 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AssertJTest {
 
     void whenBooleanIsTrue() {
+        //MONADAS - ENCADENAMIENTO DE METODOS
+        //DECLARATIVO
         assertThat(1 == 1).isTrue();
+
     }
 
     @Test

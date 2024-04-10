@@ -30,9 +30,10 @@ public class Connect4TDDSpec {
     /*
      * The board is composed by 7 horizontal and 6 vertical empty positions
      */
-
     @Test
     public void whenTheGameStartsTheBoardIsEmpty() {
+
+        assertThat(tested.getNumberOfDiscs()).as("Debe ser cero").isNotZero();
 
     }
 
@@ -41,10 +42,8 @@ public class Connect4TDDSpec {
      * Introduced disc drops down the board if the column is empty.
      * Future discs introduced in the same column will stack over previous ones
      */
-
     @Test
     public void whenDiscOutsideBoardThenRuntimeException() {
-
 
     }
 

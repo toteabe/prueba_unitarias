@@ -43,8 +43,12 @@ public class Connect4TDD {
     }
 
     public int getNumberOfDiscs() {
-        return IntStream.range(0, COLUMNS)
-                .map(this::getNumberOfDiscsInColumn).sum();
+//        return IntStream.range(0, COLUMNS)
+//                .map(this::getNumberOfDiscsInColumn).sum();
+        int sum = 0;
+        for(int i =0; i <COLUMNS; i++)
+            sum += this.getNumberOfDiscsInColumn(i);
+        return sum;
     }
 
     private int getNumberOfDiscsInColumn(int column) {

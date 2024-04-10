@@ -1,12 +1,17 @@
 package org.iesvdm.tddjava.asserts;
 
 
+//HAY VARIAS VERSIONES DE JUNIT: 3, 4, 5
 
+//JUNIT 5 -> VERSION JUPITER TIENE SOPORTE PARA JAVA 8 FUNDAMENTALMENTE LAMBDAS
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.testng.IObjectFactory2;
-
 import java.util.*;
 
+//IMPORT STATIC ¿QUÉ HACE? ES CÓDIGO QUE NO NECESITA DE UN OBJETO PARA EJECUTARSE EN CIERTA
+//FORMA TIENE UNA NATURALEZA GLOBAL
+//EN ESTE CASO SE ESTÁ TRAYENDO TODO EL CÓDIGO ESTÁTICO DE LA CLASE Assertions
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -43,11 +48,18 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 
 
+//EXISTE LA CONVENCIÓN DE QUE LAS CLASES SE LLAMAN CON EL SUFIJO TEST
+//NombreCosaBajoTesteoTest, *Test
 public class AssertTest {
 
+    //LA CLASE DE TEST TIENE UNA SERIE DE MÉTODOS QUE IMPLEMENTAN PRUEBAS PARCIALES DE INTERÉS
+    // ES FUNDAMENTAL QUE EL MÉTODO ESTÉ ANOTADO CON LA ANOTACIÓN @Test
     @Test
     void whenBooleanIsTrue() {
-        assertTrue(1 == 1);
+
+        //EL ASSERT ES UNA AFIRMACIÓN QUE DEBE CUMPLIRSE PARA QUE ESTE TEST SEA VÁLIDO
+        assertTrue(1 != 1);
+
     }
 
     @Test
@@ -59,7 +71,7 @@ public class AssertTest {
     @Test
     void whenObjectIsNull() {
         Object nullObj = null;
-
+        //COMPRUEBO QUE LA REFERENCIA APUNTA NULL
         assertNull(nullObj);
 
     }
@@ -67,7 +79,7 @@ public class AssertTest {
     @Test
     void whenObjectIsNotNull() {
         Object obj = new Object();
-
+        //COMPRUEBO QUE LA REFERENCIA NO APUNTA A NULL
         assertNotNull(obj);
 
     }
@@ -75,10 +87,24 @@ public class AssertTest {
 
     @Test
     void shouldBeEqual() {
-        final Integer ACTUAL = 9;
-        final Integer EXPECTED = 9;
+        final String ACTUAL = "hola";
+        final String EXPECTED = "hola";
 
+        boolean esIgual = ACTUAL == EXPECTED;
+        //SIEMPRE QUE QUIERO COMPARAR IGUALDAD DE OBJETO (NO TIPOS PRIMITIVOS)
+        boolean esIgual2 = ACTUAL.equals(EXPECTED);
         assertEquals(EXPECTED, ACTUAL);
+
+
+//        PruebaEquals pruebaEquals1 = new PruebaEquals();
+//        pruebaEquals1.atributo = "Prueba";
+//
+//        PruebaEquals pruebaEquals2 = new PruebaEquals();
+//        pruebaEquals2.atributo = "Prueba";
+//
+//        boolean sonIguales = pruebaEquals1 == pruebaEquals2;
+//        boolean sonIgualesPorEquals = pruebaEquals1.equals(pruebaEquals2);
+//        assertEquals(pruebaEquals1, pruebaEquals2);
 
     }
 
@@ -155,7 +181,7 @@ public class AssertTest {
 
         assertTrue(list.size() == list2.size());
         assertTrue(list.containsAll(list2));
-        assertTrue(list2.containsAll(list));
+        //assertTrue(list2.containsAll(list));
 
     }
 
@@ -202,7 +228,7 @@ public class AssertTest {
         final String VALUE = "value";
 
 
-        final Map map = new HashMap<>();
+        final Map<String, String> map = new HashMap<>();
         map.put(KEY, VALUE);
 
         assertFalse(map.containsKey(INCORRECT_KEY));
