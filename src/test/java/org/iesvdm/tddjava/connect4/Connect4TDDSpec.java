@@ -12,7 +12,9 @@ import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
+/**
+ * Comentarios de clase
+ */
 public class Connect4TDDSpec {
 
     private Connect4TDD tested;
