@@ -3,6 +3,7 @@ package org.iesvdm.tddjava.connect4;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.iesvdm.tddjava.ship.Direction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,8 +12,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class Connect4TDDSpec {
@@ -50,117 +50,40 @@ public class Connect4TDDSpec {
     /**
      * Clase de test del juego connect4
      */
-    @Test
-    public void whenDiscOutsideBoardThenRuntimeException() {
 
+    @Test
+    public void whenGetFromShortNameNThenReturnDirectionN() {
+        assertEquals(Direction.NORTH, Direction.getFromShortName('N'));
     }
 
     @Test
-    public void whenFirstDiscInsertedInColumnThenPositionIsZero() {
-
-        assertThat(tested.putDiscInColumn(0)).isEqualTo(0);
-
+    public void whenGetFromShortNameWThenReturnDirectionW() {
+        assertEquals(Direction.WEST, Direction.getFromShortName('W'));
     }
 
     @Test
-    public void whenSecondDiscInsertedInColumnThenPositionIsOne() {
-
-
+    public void whenGetFromShortNameBThenReturnNone() {
+        assertEquals(Direction.NONE, Direction.getFromShortName('B'));
     }
 
     @Test
-    public void whenDiscInsertedThenNumberOfDiscsIncreases() {
-
-
-
+    public void givenSWhenLeftThenE() {
+        assertEquals(Direction.EAST, Direction.SOUTH.turnLeft());
     }
 
     @Test
-    public void whenNoMoreRoomInColumnThenRuntimeException() {
-
-
-
-    }
-
-    /*
-     * It is a two-person game so there is one colour for each player.
-     * One player uses red ('R'), the other one uses green ('G').
-     * Players alternate turns, inserting one disc every time
-     */
-
-    @Test
-    public void whenFirstPlayerPlaysThenDiscColorIsRed() {
-
+    public void givenNWhenLeftThenW() {
+        assertEquals(Direction.WEST, Direction.NORTH.turnLeft());
     }
 
     @Test
-    public void whenSecondPlayerPlaysThenDiscColorIsGreen() {
-
+    public void givenSWhenRightThenW() {
+        assertEquals(Direction.WEST, Direction.SOUTH.turnRight());
     }
-
-    /*
-     * We want feedback when either, event or error occur within the game.
-     * The output shows the status of the board on every move
-     */
-
     @Test
-    public void whenAskedForCurrentPlayerTheOutputNotice() {
-
-
-
-    }
-
-    @Test
-    public void whenADiscIsIntroducedTheBoardIsPrinted() {
-
-    }
-
-    /*
-     * When no more discs can be inserted, the game finishes and it is considered a draw
-     */
-
-    @Test
-    public void whenTheGameStartsItIsNotFinished() {
-
-    }
-
-    @Test
-    public void whenNoDiscCanBeIntroducedTheGamesIsFinished() {
-
-    }
-
-    /*
-     * If a player inserts a disc and connects more than 3 discs of his colour
-     * in a straight vertical line then that player wins
-     */
-
-    @Test
-    public void when4VerticalDiscsAreConnectedThenThatPlayerWins() {
-
-    }
-
-    /*
-     * If a player inserts a disc and connects more than 3 discs of his colour
-     * in a straight horizontal line then that player wins
-     */
-
-    @Test
-    public void when4HorizontalDiscsAreConnectedThenThatPlayerWins() {
-
-    }
-
-    /*
-     * If a player inserts a disc and connects more than 3 discs of his colour
-     * in a straight diagonal line then that player wins
-     */
-
-    @Test
-    public void when4Diagonal1DiscsAreConnectedThenThatPlayerWins() {
-
-    }
-
-    @Test
-    public void when4Diagonal2DiscsAreConnectedThenThatPlayerWins() {
-
+    public void givenWWhenRightThenN() {
+        assertEquals(Direction.NORTH, Direction.WEST.turnRight());
     }
 }
+
+
