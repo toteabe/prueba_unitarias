@@ -1,6 +1,6 @@
 package org.iesvdm.tddjava.ship;
 
-public class Ship {
+public class    Ship {
 
     private final Location location;
     public Location getLocation() {

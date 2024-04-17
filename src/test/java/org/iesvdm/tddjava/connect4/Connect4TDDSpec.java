@@ -9,8 +9,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class Connect4TDDSpec {
@@ -33,7 +32,7 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenTheGameStartsTheBoardIsEmpty() {
-
+        assertThat ( tested.getNumberOfDiscs ()==0 );
     }
 
     /*
@@ -50,9 +49,8 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenFirstDiscInsertedInColumnThenPositionIsZero() {
-
+        assertThat ( tested.getNumberOfDiscs ()==0 );
         assertThat(tested.putDiscInColumn(0)).isEqualTo(0);
-
     }
 
     @Test
@@ -86,12 +84,15 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenFirstPlayerPlaysThenDiscColorIsRed() {
-
+        assertThat ( tested.getNumberOfDiscs ()==0 );
+        assertThat(tested.getCurrentPlayer ().equals ( Connect4.Color.RED ));
     }
 
     @Test
     public void whenSecondPlayerPlaysThenDiscColorIsGreen() {
-
+        assertEquals ( tested.getNumberOfDiscs (), 0);
+        tested.putDiscInColumn ( 0 );
+        assertThat(tested.getCurrentPlayer ().equals ( Connect4.Color.GREEN ));
     }
 
     /*
@@ -101,28 +102,35 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenAskedForCurrentPlayerTheOutputNotice() {
-
-
-
+        String current = tested.getCurrentPlayer ();
+        assertEquals ( current, tested.getCurrentPlayer () );
+        assertThat ( output.toString () ).isNotEmpty ();
     }
 
     @Test
     public void whenADiscIsIntroducedTheBoardIsPrinted() {
-
+        tested.putDiscInColumn ( 1 );
+        assertThat ( output.toString () ).isNotEmpty ();
     }
-
     /*
      * When no more discs can be inserted, the game finishes and it is considered a draw
      */
 
     @Test
     public void whenTheGameStartsItIsNotFinished() {
-
+        assertFalse ( tested.isFinished () );
     }
 
     @Test
     public void whenNoDiscCanBeIntroducedTheGamesIsFinished() {
-
+        for(int column = 0;column<Connect4.COLUMNS;column++)
+        {
+            for(int row = 0; row<Connect4.ROWS;row++)
+            {
+                tested.putDiscInColumn ( column );
+            }
+        }
+        assertTrue ( tested.isFinished ());
     }
 
     /*
@@ -132,7 +140,13 @@ public class Connect4TDDSpec {
 
     @Test
     public void when4VerticalDiscsAreConnectedThenThatPlayerWins() {
-
+        for(int j=0;j<4;j++)
+        {
+            for(int i=0;i<2;i++){
+                tested.putDiscInColumn ( i );
+            }
+        }
+        assertTrue(tested.getWinner ().equals ( "R" ));
     }
 
     /*
@@ -142,7 +156,13 @@ public class Connect4TDDSpec {
 
     @Test
     public void when4HorizontalDiscsAreConnectedThenThatPlayerWins() {
-
+        for(int j=0;j<4;j++)
+        {
+            for(int i=0;i<2;i++){
+                tested.putDiscInColumn ( 0+j );
+            }
+        }
+        assertTrue(tested.getWinner ().equals ( "R" ));
     }
 
     /*
@@ -152,11 +172,31 @@ public class Connect4TDDSpec {
 
     @Test
     public void when4Diagonal1DiscsAreConnectedThenThatPlayerWins() {
-
+        for(int i=0 ;i<2;i++)
+        {
+            for(int j=1;j<5;j++)
+            {
+                tested.putDiscInColumn ( j+i );
+            }
+        }
+        tested.putDiscInColumn ( 3 );
+        tested.putDiscInColumn ( 4 );
+        tested.putDiscInColumn ( 4 );
+        assertTrue(tested.getWinner ().equals ( "R" ));
     }
 
     @Test
     public void when4Diagonal2DiscsAreConnectedThenThatPlayerWins() {
-
+        for(int i=0 ;i<2;i++)
+        {
+            for(int j=5;j>1;j--)
+            {
+                tested.putDiscInColumn ( j-i );
+            }
+        }
+        tested.putDiscInColumn ( 3 );
+        tested.putDiscInColumn ( 2 );
+        tested.putDiscInColumn ( 2 );
+        assertTrue(tested.getWinner ().equals ( "R" ));
     }
 }
