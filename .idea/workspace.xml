@@ -7,7 +7,12 @@
     <list default="true" id="561063a2-7378-4c9d-bb45-d310103a949e" name="Changes" comment="PRIMEROS TEST HECHOS cambios en connect4 test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/connect4/Connect4TDDSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/connect4/Connect4TDDSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/DirectionSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/DirectionSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/LocationSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/LocationSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PlanetSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PlanetSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/ShipSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/ShipSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/connect4/Connect4TDDSpec.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,40 +53,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.AssertJTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssertJTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssertTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssertTest.shouldBeEqual.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssertTest.shouldContainCorrectElementsInAnyOrder.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssertTest.shouldReferToSameObject.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssertTest.whenBooleanIsFalse.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssertTest.whenBooleanIsTrue.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssertTest.whenObjectIsNotNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AssertTest.whenObjectIsNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Connect4TDDSpec.whenFirstDiscInsertedInColumnThenPositionIsZero.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.test_person [test].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;test__connect4&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/IdeaProjects/tests&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AssertJTest (1).executor": "Run",
+    "JUnit.AssertJTest.executor": "Run",
+    "JUnit.AssertTest.executor": "Run",
+    "JUnit.AssertTest.shouldBeEqual.executor": "Run",
+    "JUnit.AssertTest.shouldContainCorrectElementsInAnyOrder.executor": "Run",
+    "JUnit.AssertTest.shouldReferToSameObject.executor": "Run",
+    "JUnit.AssertTest.whenBooleanIsFalse.executor": "Run",
+    "JUnit.AssertTest.whenBooleanIsTrue.executor": "Run",
+    "JUnit.AssertTest.whenObjectIsNotNull.executor": "Run",
+    "JUnit.AssertTest.whenObjectIsNull.executor": "Run",
+    "JUnit.Connect4TDDSpec.givenSWhenRightThenW.executor": "Run",
+    "JUnit.Connect4TDDSpec.givenWWhenRightThenN.executor": "Run",
+    "JUnit.Connect4TDDSpec.whenFirstDiscInsertedInColumnThenPositionIsZero.executor": "Run",
+    "JUnit.Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty.executor": "Run",
+    "JUnit.ShipSpec.executor": "Run",
+    "JUnit.shipSpec.beforeTest.executor": "Run",
+    "JUnit.shipSpec.executor": "Run",
+    "JUnit.shipSpec.whenInstantiatedThenLocationIsSet.executor": "Run",
+    "JUnit.shipSpec.whenReceiveCommandsThenOForOkAndXForObstacle.executor": "Run",
+    "Maven.test_person [test].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.DirectionSpec.whenGetFromShortNameNThenReturnDirectionN.executor": "Run",
+    "TestNG.LocationSpec.LocationSpec.executor": "Run",
+    "TestNG.PlanetSpec.whenInstantiatedThenObstaclesAreSet.executor": "Run",
+    "TestNG.PointSpec.PointSpec.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "test__connect4",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/usuario/IdeaProjects/tests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\usuario\IdeaProjects\bucles\bd_persons\test_person" />
@@ -91,7 +107,7 @@
       <recent name="C:\Users\usuario\IdeaProjects\bucles\bd_persons\test_person" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty">
+  <component name="RunManager" selected="JUnit.ShipSpec">
     <configuration name="AssertJTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
@@ -140,71 +156,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AssertJTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test_person" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.asserts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.asserts" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.asserts.AssertJTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssertTest.shouldReferToSameObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test_person" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.asserts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.asserts" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.asserts.AssertTest" />
-      <option name="METHOD_NAME" value="shouldReferToSameObject" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssertTest.whenObjectIsNotNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test_person" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.asserts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.asserts" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.asserts.AssertTest" />
-      <option name="METHOD_NAME" value="whenObjectIsNotNull" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssertTest.whenObjectIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test_person" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.asserts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.asserts" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.asserts.AssertTest" />
-      <option name="METHOD_NAME" value="whenObjectIsNull" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Connect4TDDSpec.whenFirstDiscInsertedInColumnThenPositionIsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Connect4TDDSpec.givenSWhenRightThenW" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
         <pattern>
@@ -214,13 +166,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
       <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="whenFirstDiscInsertedInColumnThenPositionIsZero" />
+      <option name="METHOD_NAME" value="givenSWhenRightThenW" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Connect4TDDSpec.givenWWhenRightThenN" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
         <pattern>
@@ -230,27 +182,72 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
       <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="whenTheGameStartsTheBoardIsEmpty" />
+      <option name="METHOD_NAME" value="givenWWhenRightThenN" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShipSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test_person" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.ShipSpec" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="shipSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test_person" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.shipSpec" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="shipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test_person" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.shipSpec" />
+      <option name="METHOD_NAME" value="whenReceiveCommandsThenOForOkAndXForObstacle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AssertJTest" />
-      <item itemvalue="JUnit.Connect4TDDSpec.whenFirstDiscInsertedInColumnThenPositionIsZero" />
-      <item itemvalue="JUnit.Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty" />
-      <item itemvalue="JUnit.AssertTest.shouldReferToSameObject" />
-      <item itemvalue="JUnit.AssertTest.whenObjectIsNotNull" />
-      <item itemvalue="JUnit.AssertTest.whenObjectIsNull" />
+      <item itemvalue="JUnit.Connect4TDDSpec.givenSWhenRightThenW" />
+      <item itemvalue="JUnit.Connect4TDDSpec.givenWWhenRightThenN" />
+      <item itemvalue="JUnit.ShipSpec" />
+      <item itemvalue="JUnit.shipSpec" />
+      <item itemvalue="JUnit.shipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty" />
-        <item itemvalue="JUnit.Connect4TDDSpec.whenFirstDiscInsertedInColumnThenPositionIsZero" />
-        <item itemvalue="JUnit.AssertTest.whenObjectIsNull" />
-        <item itemvalue="JUnit.AssertTest.whenObjectIsNotNull" />
-        <item itemvalue="JUnit.AssertTest.shouldReferToSameObject" />
+        <item itemvalue="JUnit.ShipSpec" />
+        <item itemvalue="JUnit.shipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" />
+        <item itemvalue="JUnit.shipSpec" />
+        <item itemvalue="JUnit.Connect4TDDSpec.givenSWhenRightThenW" />
+        <item itemvalue="JUnit.Connect4TDDSpec.givenWWhenRightThenN" />
       </list>
     </recent_temporary>
   </component>
@@ -289,6 +286,7 @@
       <workItem from="1712663617805" duration="2775000" />
       <workItem from="1712902769975" duration="1653000" />
       <workItem from="1713268106418" duration="1292000" />
+      <workItem from="1713434333415" duration="2364000" />
     </task>
     <task id="LOCAL-00001" summary="COMMIT INICIAL">
       <created>1680163647182</created>
