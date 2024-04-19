@@ -1,18 +1,18 @@
 package org.iesvdm.tddjava.ship;
+
 import org.testng.annotations.*;
+
 import java.util.ArrayList;
 import java.util.List;
-import static org.testng.Assert.*;
 
+import static org.testng.Assert.*;
 
 @Test
 public class PlanetSpec {
 
-
     private Planet planet;
     private final Point max = new Point(50, 50);
     private List<Point> obstacles;
-
 
     @BeforeMethod
     public void beforeTest() {
@@ -22,16 +22,12 @@ public class PlanetSpec {
         planet = new Planet(max, obstacles);
     }
 
-
     public void whenInstantiatedThenMaxIsSet() {
-        assertEquals(planet.getMax(), max);
+        assertEquals(planet.getMax(), max); // Verifica que el límite máximo del planeta se establezca correctamente
     }
-
 
     public void whenInstantiatedThenObstaclesAreSet() {
-        assertEquals(planet.getObstacles(), obstacles);
+        assertEquals(planet.getObstacles(), obstacles); // Verifica que la lista de obstáculos del planeta se establezca correctamente
     }
 
-
 }
-
