@@ -11,28 +11,17 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertThrows;
 
 
 public class Connect4TDDSpec {
-
-    //ATRIBUTOS DEL CONNECT4TDDSPEC
-    private Connect4TDD tested;
-    private OutputStream output;
-
-
-    @BeforeEach
-    public void beforeEachTest() {
-        output = new ByteArrayOutputStream();
-        tested = new Connect4TDD(new PrintStream(output));
-    }
-
-
     @Test
     public void whenTheGameStartsTheBoardIsEmpty() {
+        Connect4TDD tested = null;
         assertEquals(0, tested.getNumberOfDiscs());
     }
-
 
     @Test
     public void whenGetFromShortNameNThenReturnDirectionN() {

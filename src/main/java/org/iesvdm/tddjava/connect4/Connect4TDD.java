@@ -11,7 +11,7 @@ public class Connect4TDD {
 
     private static final int ROWS = 6;
 
-    private static final int COLUMNS = 7;
+    static final int COLUMNS = 7;
 
     private static final int DISCS_TO_WIN = 4;
 
