@@ -181,6 +181,7 @@ public class LocationSpec {
         Point p = new Point( location.getX (), location.getY () +1);
         obstacles.add (p);
         assertFalse ( location.backward (max, obstacles) );
+        
     }
 
 }
