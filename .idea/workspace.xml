@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="561063a2-7378-4c9d-bb45-d310103a949e" name="Changes" comment="PRIMEROS TEST HECHOS cambios en connect4 test">
+    <list default="true" id="561063a2-7378-4c9d-bb45-d310103a949e" name="Changes" comment="cambios en connect4 test Y el ship">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/connect4/Connect4TDDSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/connect4/Connect4TDDSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/DirectionSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/DirectionSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/LocationSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/LocationSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PlanetSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PlanetSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PointSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/ShipSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/ShipSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/connect4/Connect4TDDSpec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/DirectionSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/DirectionSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/LocationSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/LocationSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/PlanetSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/PlanetSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/PointSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/PointSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/ShipSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/ship/ShipSpec.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +65,20 @@
     "JUnit.AssertTest.whenBooleanIsTrue.executor": "Run",
     "JUnit.AssertTest.whenObjectIsNotNull.executor": "Run",
     "JUnit.AssertTest.whenObjectIsNull.executor": "Run",
+    "JUnit.Connect4TDDSpec.givenNWhenLeftThenW.executor": "Run",
     "JUnit.Connect4TDDSpec.givenSWhenRightThenW.executor": "Run",
     "JUnit.Connect4TDDSpec.givenWWhenRightThenN.executor": "Run",
     "JUnit.Connect4TDDSpec.whenFirstDiscInsertedInColumnThenPositionIsZero.executor": "Run",
+    "JUnit.Connect4TDDSpec.whenGetFromShortNameWThenReturnDirectionW.executor": "Run",
     "JUnit.Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty.executor": "Run",
+    "JUnit.PointSpec.givenDirectionEAndXEquals1WhenReceiveCommandsBThenWrap.executor": "Run",
+    "JUnit.PointSpec.whenInstantiatedThenLocationIsSet.executor": "Run",
+    "JUnit.PointSpec.whenMoveForwardThenForward.executor": "Run",
+    "JUnit.PointSpec.whenReceiveCommandsRThenTurnRight.executor": "Run",
+    "JUnit.ShipSpec.beforeTest.executor": "Run",
     "JUnit.ShipSpec.executor": "Run",
+    "JUnit.ShipSpec.whenInstantiatedThenLocationIsSet.executor": "Run",
+    "JUnit.ShipSpec.whenMoveForwardThenForward.executor": "Run",
     "JUnit.shipSpec.beforeTest.executor": "Run",
     "JUnit.shipSpec.executor": "Run",
     "JUnit.shipSpec.whenInstantiatedThenLocationIsSet.executor": "Run",
@@ -78,10 +87,20 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.DirectionSpec.givenWWhenRightThenN.executor": "Run",
+    "TestNG.DirectionSpec.whenGetFromShortNameBThenReturnNone.executor": "Debug",
     "TestNG.DirectionSpec.whenGetFromShortNameNThenReturnDirectionN.executor": "Run",
+    "TestNG.DirectionSpec.whenGetFromShortNameWThenReturnDirectionW.executor": "Run",
     "TestNG.LocationSpec.LocationSpec.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionWWhenForwardThenXDecreases.executor": "Run",
+    "TestNG.PlanetSpec.executor": "Run",
+    "TestNG.PlanetSpec.whenInstantiatedThenMaxIsSet.executor": "Run",
     "TestNG.PlanetSpec.whenInstantiatedThenObstaclesAreSet.executor": "Run",
     "TestNG.PointSpec.PointSpec.executor": "Run",
+    "TestNG.PointSpec.givenDirectionEAndXEquals1WhenReceiveCommandsBThenWrap.executor": "Run",
+    "TestNG.PointSpec.whenInstantiatedThenLocationIsSet.executor": "Debug",
+    "TestNG.PointSpec.whenMoveForwardThenForward.executor": "Run",
+    "TestNG.PointSpec.whenReceiveCommandsRThenTurnRight.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "test__connect4",
     "kotlin-language-version-configured": "true",
@@ -107,7 +126,7 @@
       <recent name="C:\Users\usuario\IdeaProjects\bucles\bd_persons\test_person" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShipSpec">
+  <component name="RunManager" selected="JUnit.ShipSpec.whenMoveForwardThenForward">
     <configuration name="AssertJTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
@@ -140,49 +159,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AssertJTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PointSpec.whenReceiveCommandsRThenTurnRight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.asserts.*" />
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.asserts" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.asserts.AssertJTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Connect4TDDSpec.givenSWhenRightThenW" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test_person" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.connect4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="givenSWhenRightThenW" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Connect4TDDSpec.givenWWhenRightThenN" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test_person" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.connect4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="givenWWhenRightThenN" />
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.PointSpec" />
+      <option name="METHOD_NAME" value="whenReceiveCommandsRThenTurnRight" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -203,7 +190,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="shipSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShipSpec.beforeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
         <pattern>
@@ -212,42 +199,61 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.shipSpec" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="shipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test_person" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.shipSpec" />
-      <option name="METHOD_NAME" value="whenReceiveCommandsThenOForOkAndXForObstacle" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.ShipSpec" />
+      <option name="METHOD_NAME" value="beforeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShipSpec.whenMoveForwardThenForward" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test_person" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.ShipSpec" />
+      <option name="METHOD_NAME" value="whenMoveForwardThenForward" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlanetSpec.whenInstantiatedThenMaxIsSet" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="test_person" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.PlanetSpec" />
+      <option name="METHOD_NAME" value="whenInstantiatedThenMaxIsSet" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.Connect4TDDSpec.givenSWhenRightThenW" />
-      <item itemvalue="JUnit.Connect4TDDSpec.givenWWhenRightThenN" />
+      <item itemvalue="JUnit.PointSpec.whenReceiveCommandsRThenTurnRight" />
+      <item itemvalue="JUnit.ShipSpec.beforeTest" />
+      <item itemvalue="JUnit.ShipSpec.whenMoveForwardThenForward" />
       <item itemvalue="JUnit.ShipSpec" />
-      <item itemvalue="JUnit.shipSpec" />
-      <item itemvalue="JUnit.shipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" />
+      <item itemvalue="TestNG.PlanetSpec.whenInstantiatedThenMaxIsSet" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShipSpec.whenMoveForwardThenForward" />
         <item itemvalue="JUnit.ShipSpec" />
-        <item itemvalue="JUnit.shipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" />
-        <item itemvalue="JUnit.shipSpec" />
-        <item itemvalue="JUnit.Connect4TDDSpec.givenSWhenRightThenW" />
-        <item itemvalue="JUnit.Connect4TDDSpec.givenWWhenRightThenN" />
+        <item itemvalue="JUnit.ShipSpec.beforeTest" />
+        <item itemvalue="JUnit.PointSpec.whenReceiveCommandsRThenTurnRight" />
+        <item itemvalue="TestNG.PlanetSpec.whenInstantiatedThenMaxIsSet" />
       </list>
     </recent_temporary>
   </component>
@@ -286,7 +292,8 @@
       <workItem from="1712663617805" duration="2775000" />
       <workItem from="1712902769975" duration="1653000" />
       <workItem from="1713268106418" duration="1292000" />
-      <workItem from="1713434333415" duration="2364000" />
+      <workItem from="1713434333415" duration="2519000" />
+      <workItem from="1713507675556" duration="5461000" />
     </task>
     <task id="LOCAL-00001" summary="COMMIT INICIAL">
       <created>1680163647182</created>
@@ -318,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712666135974</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cambios en connect4 test Y el ship">
+      <option name="closed" value="true" />
+      <created>1713436826827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713436826827</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +366,8 @@
     <MESSAGE value="COMMIT INICIAL" />
     <MESSAGE value="cambio en connect4 test" />
     <MESSAGE value="PRIMEROS TEST HECHOS cambios en connect4 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="PRIMEROS TEST HECHOS cambios en connect4 test" />
+    <MESSAGE value="cambios en connect4 test Y el ship" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios en connect4 test Y el ship" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -365,6 +381,11 @@
           <url>file://$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/asserts/AssertJTest.class</url>
           <line>14</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/ShipSpec.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

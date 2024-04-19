@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.testng.Assert.*;
 
-@Test
+
 public class ShipSpec {
     //ATRIBUTOS PARA EL TEST DEL SHIPSPEC
     private Ship ship;
