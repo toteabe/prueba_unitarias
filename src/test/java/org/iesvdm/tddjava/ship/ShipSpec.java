@@ -1,21 +1,21 @@
 package org.iesvdm.tddjava.ship;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.testng.Assert.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ShipSpec {
-    //ATRIBUTOS PARA EL TEST DEL SHIPSPEC
+
+    // ATRIBUTOS PARA EL TEST DEL SHIPSPEC
     private Ship ship;
     private Location location;
     private Planet planet;
 
-
-    @Test
+    @BeforeEach
     public void beforeTest() {
         Point max = new Point(50, 50);
         location = new Location(new Point(21, 13), Direction.NORTH);
@@ -23,85 +23,75 @@ public class ShipSpec {
         obstacles.add(new Point(44, 44));
         obstacles.add(new Point(45, 46));
         planet = new Planet(max, obstacles);
-//        ship = new Ship(location);
         ship = new Ship(location, planet);
     }
-    @Test
-    public void whenInstantiatedThenLocationIsSet() {
 
-    }
-
-    //    public void givenNorthWhenMoveForwardThenYDecreases() {
-//        ship.moveForward();
-//        assertEquals(ship.getLocation().getPoint().getY(), 12);
-//    }
-//
-//    public void givenEastWhenMoveForwardThenXIncreases() {
-//        ship.getLocation().setDirection(Direction.EAST);
-//        ship.moveForward();
-//        assertEquals(ship.getLocation().getPoint().getX(), 22);
-//    }
+    //Estos 2 siguientes test no me los coje bien porque dice que no sale el núm esperado...
     @Test
     public void whenMoveForwardThenForward() {
         ship.moveForward();
-        assertEquals(ship.getLocation().getPoint().getY(), 14);
+        assertEquals(14, ship.getLocation().getPoint().getY());
     }
-
 
     @Test
     public void whenMoveBackwardThenBackward() {
         ship.moveBackward();
-        assertEquals(ship.getLocation().getPoint().getY(), 12);
+        assertEquals(12, ship.getLocation().getPoint().getY());
     }
-
 
     @Test
     public void whenTurnLeftThenLeft() {
         ship.turnLeft();
-        assertEquals(ship.getLocation().getDirection(), Direction.WEST);
+        assertEquals(Direction.WEST, ship.getLocation().getDirection());
     }
-
 
     @Test
     public void whenTurnRightThenRight() {
         ship.turnRight();
-        assertEquals(ship.getLocation().getDirection(), Direction.EAST);
+        assertEquals(Direction.EAST, ship.getLocation().getDirection());
     }
 
-
+    //En estos 2 siguientes lo mismo, el valor no es el esperado
     @Test
     public void whenReceiveCommandsFThenForward() {
         ship.receiveCommands("f");
-        assertEquals(ship.getLocation().getPoint().getY(), 14);
+        assertEquals(14, ship.getLocation().getPoint().getY());
     }
+
     @Test
     public void whenReceiveCommandsBThenBackward() {
         ship.receiveCommands("b");
-        assertEquals(ship.getLocation().getPoint().getY(), 12);
+        assertEquals(12, ship.getLocation().getPoint().getY());
     }
+
     @Test
     public void whenReceiveCommandsLThenTurnLeft() {
         ship.receiveCommands("l");
-        assertEquals(ship.getLocation().getDirection(), Direction.WEST);
+        assertEquals(Direction.WEST, ship.getLocation().getDirection());
     }
+
     @Test
     public void whenReceiveCommandsRThenTurnRight() {
         ship.receiveCommands("r");
-        assertEquals(ship.getLocation().getDirection(), Direction.EAST);
+        assertEquals(Direction.EAST, ship.getLocation().getDirection());
     }
+
     @Test
     public void whenReceiveCommandsThenAllAreExecuted() {
         ship.receiveCommands("allexecuted");
     }
+
+    //NO se encuentra el valor esperado, por eso parece que da ERROR
     @Test
     public void whenReceiveCommandsThenStopOnObstacle() {
         ship.receiveCommands("execute");
-        Assert.assertEquals(new Point(44, 43), ship.getLocation().getPoint());
+        assertEquals(new Point(44, 43), ship.getLocation().getPoint());
     }
+
     @Test
     public void whenReceiveCommandsThenOForOkAndXForObstacle() {
         String result = ship.receiveCommands("execute");
-        assertEquals(result, "OXXXXXX");
+        assertEquals("OXXXXXX", result);
     }
 }
 
