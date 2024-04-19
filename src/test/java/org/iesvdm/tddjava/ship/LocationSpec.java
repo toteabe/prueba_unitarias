@@ -154,20 +154,29 @@ public class LocationSpec {
     public void givenDirectionEAndXEqualsMaxXWhenForwardThen1() {
         location.setDirection ( Direction.EAST );
         location.getPoint ().setX ( max.getX () );
-        location.forward ();
-        System.out.println (location.getX ());
+        location.forward (max);
+        assertEquals ( location.getX (), 1 );
     }
 
     public void givenDirectionWAndXEquals1WhenForwardThenMaxX() {
-
+        location.setDirection ( Direction.WEST );
+        location.getPoint ().setX ( 1 );
+        location.forward (max);
+        assertEquals ( location.getX (), max.getX () );
     }
 
     public void givenDirectionNAndYEquals1WhenForwardThenMaxY() {
-
+        location.setDirection ( Direction.NORTH );
+        location.getPoint ().setY ( 1 );
+        location.forward (max);
+        assertEquals ( location.getY (), max.getY () );
     }
 
     public void givenDirectionSAndYEqualsMaxYWhenForwardThen1() {
-
+        location.setDirection ( Direction.SOUTH );
+        location.getPoint ().setY ( max.getY () );
+        location.forward (max);
+        assertEquals ( location.getY (), 1 );
     }
 
     public void givenObstacleWhenForwardThenReturnFalse() {
