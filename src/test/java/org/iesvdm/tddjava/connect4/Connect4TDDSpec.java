@@ -87,6 +87,7 @@ public class Connect4TDDSpec {
 
 
 
+
         assertThat(outContent.toString().compareTo(tablero) == 0).isTrue();
 
         System.setOut(originalOut);
